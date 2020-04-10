@@ -2,7 +2,13 @@
 
 A running list of random things I've learned about computery things.
 
-## 2019 Q4
+## 2020
+
+### Setup GitHub Actions
+
+My [catch-exit repo has an example](https://github.com/electrovir/catch-exit/blob/master/.github/workflows/tests.yml) of using GitHub Actions to run tests.
+
+## 2019
 
 ### Edit macOS terminal.app prompt
 
