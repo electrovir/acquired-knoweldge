@@ -4,6 +4,47 @@ A running list of random things I've learned about computery things.
 
 ## 2020
 
+### Keyboard shortcut to toggle Apple keyboard Fn mode on Linux
+
+Change the owner of the `fnmode` file:
+
+```bash
+sudo chown <your-username> /sys/module/hid_apple/parameters/fnmode
+```
+
+(Hopefully this `chown` persists across reboots, I haven't tested that yet.)
+
+Create a `.sh` file with the following contents:
+
+```bash
+#!/usr/bin/env bash
+
+path="/sys/module/hid_apple/parameters/fnmode"
+currentValue=$(cat "$path");
+
+if [ "$currentValue" -eq "1" ]; then
+    echo "2" > "$path"
+else
+    echo "1" > "$path"
+fi
+```
+
+Make that script executable:
+
+```bash
+chmod +x <path/to/script>
+```
+
+Open Ubuntu's `Settings` app. Navigate to Devices > Keyboard. Scroll to the bottom and click `+`. Enter a `Name` and `Shortcut`. For `Command`, use the following:
+
+```
+bash /absolute/path/to/script.sh
+```
+
+The path to your script _must_ be an absolute path.
+
+Now the `Shortcut` you entered should toggle the Fn mode between media keys and function keys!
+
 ### Setup GitHub Actions
 
 My [catch-exit repo has an example](https://github.com/electrovir/catch-exit/blob/master/.github/workflows/tests.yml) of using GitHub Actions to run tests.
