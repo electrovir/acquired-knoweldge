@@ -12,7 +12,7 @@ Change the owner of the `fnmode` file:
 sudo chown <your-username> /sys/module/hid_apple/parameters/fnmode
 ```
 
-(Hopefully this `chown` persists across reboots, I haven't tested that yet.)
+**Note**: this `chown` does not persist through reboots. You must either write a startup script the changes it, change it in your `.bashrc`, or somehow give the keyboard shortcut execution environment access to `sudo`.
 
 Create a `.sh` file with the following contents:
 
