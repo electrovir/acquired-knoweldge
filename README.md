@@ -4,6 +4,39 @@ A running list of random things I've learned about computery things.
 
 ## 2020
 
+### Remove a known host for ssh (on Mac at least)
+
+This is useful when, for example, you insert a new SD card into a Raspberry Pi that you've connected to before. This is needed to prevent the `Someone could be eavesdropping on you right now (man-in-the-middle attack)!` ssh error.
+
+Open this file 
+```bash
+code ~/.ssh/known_hosts
+```
+
+Search for the IP address of the Pi in the file, remove that line.
+
+### Enable `code` CLI for VS Code on Mac
+
+In VS Code, press `cmd+p` and type the following:
+
+```
+>Shell Command: Install 'code' command in PATH
+```
+
+Run the command. `code` will now be available in new Terminal shells.
+
+### Enable `ssh` for headless Raspberry Pi
+
+Mount the Raspberry Pi's SD card on another computer.
+
+```bash
+# cd into the mounted SD card
+cd /Volumes/boot
+touch ssh
+```
+
+Eject the SD card and insert it back into the Pi. `ssh` will be enabled now.
+
 ### Keyboard shortcut to toggle Apple keyboard Fn mode on Linux
 
 Change the owner of the `fnmode` file:
