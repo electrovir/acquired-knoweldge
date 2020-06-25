@@ -4,6 +4,18 @@ A running list of random things I've learned about computery things.
 
 ## 2020
 
+### Type special characters in Linux (Ubuntu)
+
+Press `ctrl+shift+u` then the unicode character code.
+
+For example, to type "•", do the following:
+
+1. hit `ctrl+shift+u`
+2. type `2022`
+3. type a space
+
+No you have a •!
+
 ### Remove a known host for ssh (on Mac at least)
 
 This is useful when, for example, you insert a new SD card into a Raspberry Pi that you've connected to before. This is needed to prevent the `Someone could be eavesdropping on you right now (man-in-the-middle attack)!` ssh error.
