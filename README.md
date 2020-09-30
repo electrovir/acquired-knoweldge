@@ -4,6 +4,15 @@ A running list of random things I've learned about computery things.
 
 ## 2020
 
+### Rename multiple files (Ubuntu)
+
+```bash
+# syntax
+rename 's/<old-string>/<new-string>/g' <files>
+# example
+rename 's/.ts/.icon.ts/g' *.ts
+```
+
 ### Type special characters in Linux (Ubuntu)
 
 Press `ctrl+shift+u` then the unicode character code.
