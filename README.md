@@ -4,6 +4,15 @@ A running list of random things I've learned about computery things.
 
 ## 2020
 
+### DisplayLink Troubleshooting
+
+Use the [`displaylink-debian` repo](https://github.com/AdnanHodzic/displaylink-debian) for installation.
+
+[common-issues](https://github.com/AdnanHodzic/displaylink-debian/blob/master/post-install-guide.md#troubleshooting-most-common-issues)
+[post-install guide](https://github.com/AdnanHodzic/displaylink-debian/blob/master/post-install-guide.md)
+
+Note that the "common-issues" link is actually inside of the "post-install guide" link.
+
 ### Rename multiple files (Ubuntu)
 
 ```bash
