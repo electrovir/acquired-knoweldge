@@ -118,7 +118,7 @@ My [catch-exit repo has an example](https://github.com/electrovir/catch-exit/blo
 
 Enter the following into `~/.bash_profile`:
 ```bash
-export PS1="\[\e[32m\]\D{%F-%R} \[\e[34m\]\u@\h \[\e[32m\]\W\[\e[m\]\\$ "
+export PS1="\[\e[33m\]\D{%F-%R} \[\e[34m\]\u@\h \[\e[33m\]\w\[\e[m\]\\$ "
 ```
 
 * `\[\e[32m\]`: colors from [this wikipedia page](https://en.wikipedia.org/wiki/ANSI_escape_code#3/4_bit)
