@@ -4,6 +4,17 @@ A running list of random things I've learned about computery things.
 
 ## 2020
 
+### Modify Mac OS Dock timing
+
+```bash
+# make dock animation duration shorter (250 ms)
+defaults write com.apple.dock autohide-time-modifier -float 0.25
+# make dock animation delay much shorter (100 ms)
+defaults write com.apple.dock autohide-delay -float 0.1
+# relaunch dock
+killall Dock
+```
+
 ### DisplayLink Troubleshooting
 
 Use the [`displaylink-debian` repo](https://github.com/AdnanHodzic/displaylink-debian) for installation.
