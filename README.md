@@ -4,6 +4,28 @@ A running list of random things I've learned about computery things.
 
 ## 2020
 
+### git prune
+
+> Auto packing the repository in background for optimum performance.
+
+> See "git help gc" for manual housekeeping.
+
+When the above starts happening a lot, the following are potential solutions:
+
+  * Prune now
+    
+    From https://stackoverflow.com/a/32670806
+    ```bash
+    git reflog expire --expire-unreachable=now --all
+    git gc --prune=yesterday
+    ```
+  * Prune more often
+  
+    From https://stackoverflow.com/a/41771616
+    ```bash
+    git config gc.pruneExpire 1.week.ago
+    ```
+
 ### Modify Mac OS Dock timing
 
 ```bash
