@@ -1,6 +1,21 @@
 # Acquired Knowledge
 
 A running list of random things I've learned about computery things.
+## 2021
+
+### .local domain warning
+
+If Ubuntu regularly throws the following error:
+
+> Your current network has a .local domain... Avahi network... the service has been disabled.
+
+You can turn off Avahi by setting the following in `/etc/default/avahi-daemon`:
+
+```
+AVAHI_DAEMON_DETECT_LOCAL=0
+```
+
+[source](https://askubuntu.com/a/339709)
 
 ## 2020
 
