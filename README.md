@@ -3,6 +3,20 @@
 A running list of random things I've learned about computery things.
 ## 2021
 
+### find open files from drive on Mac
+
+This is useful for tracking down what's preventing a drive from being ejected.
+
+```bash
+sudo lsof | grep /Volumes/<drive-name-here>
+```
+
+[source](https://serverfault.com/questions/159422/os-x-determine-which-application-is-accessing-a-hdd-and-preventing-ejection)
+
+If it's Spotlight, go to System Preferences > Spotlight > Privacy > `+` > select drive
+
+[source](https://discussions.apple.com/thread/3166572)
+
 ### globally git ignore `.DS_Store` files (on Mac)
 
 ```bash
