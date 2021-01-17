@@ -3,6 +3,15 @@
 A running list of random things I've learned about computery things.
 ## 2021
 
+### globally git ignore `.DS_Store` files (on Mac)
+
+```bash
+echo .DS_Store > ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+```
+
+[source (coderwall.com)](https://coderwall.com/p/vz6ymw/how-to-globally-gitignore-ds_store)
+
 ### .local domain warning
 
 If Ubuntu regularly throws the following error:
