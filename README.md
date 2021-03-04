@@ -3,6 +3,18 @@
 A running list of random things I've learned about computery things.
 ## 2021
 
+### Replace duplicate lines with global regex
+
+  * the Regex (in JavaScript, note the `g` flag)
+    ```javascript
+    /^(.*)(\n\1)+$/g
+    ```
+   * the replacement
+     ```
+     $1
+     ```
+[source](https://toniguga.it/blog/2020/03/17/how-to-remove-duplicate-lines-in-visual-studio-code/)
+
 ### find open files from drive on Mac
 
 This is useful for tracking down what's preventing a drive from being ejected.
