@@ -3,6 +3,19 @@
 A running list of random things I've learned about computery things.
 ## 2021
 
+### Install Discord update on Ubuntu
+
+Discord has a ridiculous `must be your lucky day` pop up when there's an update but provides no steps on how to isntall the update, which fails to install on Ubuntu because it just says "Oh yeah Discord is already installed what are you even trying to do?"
+
+1. Download the Discord `.deb` file for Ubuntu
+2. `cd` to the directory that it's downloaded in
+3. Run the following code:
+   ```bash
+   sudo apt install ./<discord-update-file>.deb
+   ```
+
+[source](https://askubuntu.com/a/1274186)
+
 ### Replace duplicate lines with global regex
 
   * the Regex (in JavaScript, note the `g` flag)
