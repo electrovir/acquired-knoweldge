@@ -1,7 +1,18 @@
 # Acquired Knowledge
 
 A running list of random things I've learned about computery things.
+
 ## 2021
+
+### Reset a repository to its base (template) repository
+
+Just treat it as another remote and then reset to it:
+
+```bash
+git remote add base <git URL/SSH of template repo here>
+git fetch base
+git reset --hard base/master
+```
 
 ### Install Discord update on Ubuntu
 
