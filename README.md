@@ -4,6 +4,16 @@ A running list of random things I've learned about computery things.
 
 ## 2021
 
+### Add quit option to Finder
+
+Works in macOS Big Sur at least.
+
+```bash
+defaults write com.apple.finder QuitMenuItem -bool false; killall Finder
+```
+
+[source](https://www.defaults-write.com/adding-quit-option-to-os-x-finder/)
+
 ### Reset a repository to its base (template) repository
 
 Just treat it as another remote and then reset to it:
