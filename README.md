@@ -4,6 +4,15 @@ A running list of random things I've learned about computery things.
 
 ## 2021
 
+### Fix audio volume on Linux
+
+1. Use the following CLI: `alsamixer`
+2. Press `F6` to pick your output device.
+3. Inspect the `PCM` setting. Turn up or down as needed (navigate with arrow keys).
+
+[source](https://askubuntu.com/a/390744)
+
+
 ### Add quit option to Finder
 
 Works in macOS Big Sur at least.
