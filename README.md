@@ -4,6 +4,14 @@ A running list of random things I've learned about computery things.
 
 ## 2021
 
+## Find all your open PRs 
+
+Use `org:[username]`. Example:
+
+```
+is:open is:pr org:electrovir
+```
+
 ### Fix audio volume on Linux
 
 1. Use the following CLI: `alsamixer`
