@@ -4,7 +4,13 @@ A running list of random things I've learned about computery things.
 
 ## 2021
 
-## Find all your open PRs 
+### Find all new instances of `console.log` on your branch
+
+```
+git diff -U0 --right-only --cherry-pick origin/master...HEAD -S"console.log"
+```
+
+### Find all open PRs on your repos (in GitHub)
 
 Use `org:[username]`. Example:
 
