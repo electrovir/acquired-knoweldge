@@ -4,6 +4,14 @@ A running list of random things I've learned about computery things.
 
 ## 2021
 
+### Frozen `Ubuntu Software`
+
+It's actually the snap store. Do this:
+
+```bash
+sudo killall snap-store
+```
+
 ### Find all new instances of `console.log` on your branch
 
 ```
