@@ -4,6 +4,12 @@ A running list of random things I've learned about computery things.
 
 ## 2021
 
+### macOS high trustd cpu usage
+
+Boot into recovery mode and rename `valid.sqlite3` in `/private/var/protected/trustd/` (Big Sur, macOS 11) or `/Library/Keychains/crls/`. Reboot.
+
+[source](https://lapcatsoftware.com/articles/trustd.html)
+
 ### Frozen `Ubuntu Software`
 
 It's actually the snap store. Do this:
