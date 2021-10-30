@@ -22,7 +22,7 @@ A running list of random things I've learned about computery things.
    bind M-D cutwordright main
    ```
 
-([source](https://unix.stackexchange.com/a/392309))
+[source](https://unix.stackexchange.com/a/392309)
 
 ### macOS high trustd cpu usage
 
