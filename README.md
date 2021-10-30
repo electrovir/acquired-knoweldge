@@ -4,6 +4,26 @@ A running list of random things I've learned about computery things.
 
 ## 2021
 
+### Fix navigation keyboard shorctus on macOS terminal and in `nano`
+
+1. Install [Karabiner Elements](https://karabiner-elements.pqrs.org).
+2. Install [Homebrew](https://brew.sh).
+3. Follow instructions from my mirror of the [karabiner-elements-terminal-navigation](https://github.com/electrovir/karabiner-elements-terminal-navigation) config.
+4. Update `nano` with `brew install nano`.
+6. Insert the following code into your `~/.nanorc` file (create the file if necessary, start with an empty file). There are probably other keybindings that need to be fixed for nano but I haven't run into them yet.
+   ```
+   unbind M-B all 
+   bind M-B prevword main 
+   unbind M-F all 
+   bind M-F nextword main
+   unbind ^W all 
+   bind ^W cutwordleft main
+   unbind M-D all 
+   bind M-D cutwordright main
+   ```
+
+([source](https://unix.stackexchange.com/a/392309))
+
 ### macOS high trustd cpu usage
 
 Boot into recovery mode and rename `valid.sqlite3` in `/private/var/protected/trustd/` (Big Sur, macOS 11) or `/Library/Keychains/crls/`. Reboot.
