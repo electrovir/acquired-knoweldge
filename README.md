@@ -4,6 +4,15 @@ A running list of random things I've learned about computery things.
 
 ## 2021
 
+### Prevent Firefox from popping a menu-bar open after pressing alt
+
+1. go to about:config
+2. If you haven't accepted the risk warning already, read that and accept it. (If you don't accept it you can't fix this.)
+3. search for `ui.key.menuAccessKeyFocuses`
+4. set it to `false`
+
+[source](https://support.mozilla.org/en-US/questions/1278533)
+
 ### Fix navigation keyboard shorctus on macOS terminal and in `nano`
 
 1. Install [Karabiner Elements](https://karabiner-elements.pqrs.org).
