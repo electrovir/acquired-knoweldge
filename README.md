@@ -4,6 +4,10 @@ A running list of random things I've learned about computery things.
 
 ## 2021
 
+### Photoshop keybindings for GIMP
+
+https://github.com/electrovir/photoshop-keymap-for-gimp
+
 ### Prevent Firefox from popping a menu-bar open after pressing alt
 
 1. go to about:config
