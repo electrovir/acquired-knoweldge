@@ -4,6 +4,10 @@ A running list of random things I've learned about computery things.
 
 ## 2021
 
+### Fix `git commit` stalling due to gpg signing
+
+```killall gpg-agent && gpg-agent --daemon```
+
 ### Photoshop keybindings for GIMP
 
 https://github.com/electrovir/photoshop-keymap-for-gimp
