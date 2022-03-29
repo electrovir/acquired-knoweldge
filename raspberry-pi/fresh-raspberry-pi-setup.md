@@ -115,3 +115,49 @@ Starship suggests installing a [Nerd Font](https://www.nerdfonts.com/font-downlo
 2. Follow the Bash setup instruction (Step 2): https://starship.rs/guide/#step-2-setup-your-shell-to-use-starship
 4. `source ~/.bashrc` to reload without needing to restart your shell.
 5. Create a config file at `~/.config/starship.toml`. I've included my configuration file here: https://raw.githubusercontent.com/electrovir/acquired-knoweldge/master/starship.toml
+
+## Create name for Pi IP address
+
+On your personal computer (the device that will login to the Pi over SSH) do the following:
+
+1. `sudo nano /etc/hosts`
+2. Add the following line:
+    ```
+    <Pi-ip-address>   <desired-host-name>
+    ```
+- Example:
+    ```
+    192.168.0.123   my-pi
+    ```
+
+## SSH key auth
+
+### Creating SSH key
+
+On your personal computer (the device that will login to the Pi over SSH) do the following:
+
+1. `ssh-keygen`
+2. pick a file location (should be in `~/.ssh/`) and a password
+    - Example: `~/.ssh/id_my-pi`
+    - Note that I had issues with the `~` when doing this locally. I might've messed up the path in other ways but when I wrote an absolute path it worked.
+4. open `~/.ssh/config`
+5. Add the following:
+    ```
+    Host <pi-host-or-ip-address>
+        AddKeysToAgent yes
+        UseKeychain yes
+        IdentityFile ~/.ssh/<path-to-private-generated-ssh-key>
+    ```
+- Example:
+    ```
+    Host my-pi
+        AddKeysToAgent yes
+        UseKeychain yes
+        IdentityFile ~/.ssh/id_my-pi
+    ```
+
+### Copy the SSH key
+
+1. `ssh-copy-id -i <path-to-generated-.pub-file> <pi-host>`
+
+- Example: `ssh-copy-id -i ~/.ssh/id_my-pi.pub my-pi`
