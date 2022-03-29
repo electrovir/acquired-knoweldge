@@ -82,3 +82,9 @@ The `pi` user is not secure but due to its integration with Raspbian OS it's pro
     3. `sudo service ssh restart`
 
 ## Install [Starship](https://starship.rs)
+
+Follow it's installation insturctions: https://starship.rs/guide/#🚀-installation
+
+I suggest downloading the Meslo Nerd font: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
+
+Create a config file at `~/.config/starship.toml`. I've included my configuration file here: https://github.com/electrovir/acquired-knoweldge/blob/master/starship.toml
