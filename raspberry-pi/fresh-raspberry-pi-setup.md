@@ -73,6 +73,19 @@ The `pi` user is not secure but due to its integration with Raspbian OS it's pro
 
 1. `sudo passwd --lock pi`
 
+## Give the Pi a static IP
+
+This will need to be done on your router our your DHCP server. (If you're running a Pi-hole already you can run it as your DHCP server as well.) This will make `ssh`ing into your new Pi much easier.
+
+## Give the static Pi IP a nickname
+
+This only makes sense if your Pi has a static local IP.
+
+1. `sudo nano /etc/hosts`
+2. Add an entry for your Pi: `192.168.0.123 name-for-your-pi`
+
+Now you can ssh via `ssh name-for-your-pi`.
+
 ## Disable root user
 
 1. If you created a root password, expire / lock it with `sudo passwd -l root`.
@@ -83,8 +96,22 @@ The `pi` user is not secure but due to its integration with Raspbian OS it's pro
 
 ## Install [Starship](https://starship.rs)
 
-Follow it's installation insturctions: https://starship.rs/guide/#🚀-installation
+### Installing a font
 
-I suggest downloading the Meslo Nerd font: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
+Starship suggests installing a [Nerd Font](https://www.nerdfonts.com/font-downloads): fonts with tons of symbol glphys. I suggest downloading Meslo: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip. I use `Meslo LG S Regular Nerd Font Complete Windows Compatible` at size `18`.
 
-Create a config file at `~/.config/starship.toml`. I've included my configuration file here: https://github.com/electrovir/acquired-knoweldge/blob/master/starship.toml
+1. `wget -P ~/Downloads https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip` to download the font.
+2. `cd ~/Downloads`
+3. `mkdir Meslo`
+4. `unzip Meslo.zip -d Meslo`
+5. cd `Meslo`
+6. `mkdir -p ~/.local/share/fonts`
+7. `cp Meslo\ LG\ S\ Regular\ Nerd\ Font\ Complete\ Windows\ Compatible.ttf ~/.local/share/fonts`
+8.  `fc-cache -f -v` to reset the font cache. If you look at the output of this command, you should see something like `.local/share/fonts: caching, new cache contents: 1 fonts, 0 dirs`
+
+### Installing Starship
+
+1. Follow the Linux install instruction (Step 1): https://starship.rs/guide/#step-1-install-starship
+2. Follow the Bash setup instruction (Step 2): https://starship.rs/guide/#step-2-setup-your-shell-to-use-starship
+4. `source ~/.bashrc` to reload without needing to restart your shell.
+5. Create a config file at `~/.config/starship.toml`. I've included my configuration file here: https://raw.githubusercontent.com/electrovir/acquired-knoweldge/master/starship.toml
