@@ -68,7 +68,7 @@ style_root = "bg:0 bold 207"
 [hostname]
 format = "[@$hostname]($style) "
 trim_at = "."
-style = "bg:0 39"
+style = "bg:0 207"
 ssh_only = false
 
 [localip]
