@@ -104,7 +104,7 @@ Starship suggests installing a [Nerd Font](https://www.nerdfonts.com/font-downlo
 2. `cd ~/Downloads`
 3. `mkdir Meslo`
 4. `unzip Meslo.zip -d Meslo`
-5. cd `Meslo`
+5. `cd Meslo`
 6. `mkdir -p ~/.local/share/fonts`
 7. `cp Meslo\ LG\ S\ Regular\ Nerd\ Font\ Complete\ Windows\ Compatible.ttf ~/.local/share/fonts`
 8.  `fc-cache -f -v` to reset the font cache. If you look at the output of this command, you should see something like `.local/share/fonts: caching, new cache contents: 1 fonts, 0 dirs`
