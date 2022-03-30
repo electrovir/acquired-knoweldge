@@ -175,3 +175,7 @@ On your personal computer (the device that will login to the Pi over SSH) do the
 6. Run the command (`ctrl+shift+p`) named `>Remote-SSH: Connect to Host...`
 7. VS Code will install all the necessary stuff.
 8. Choose a folder to open.
+
+## Create sudo alias that preserves PATH
+
+Add this to `~/.basrc` on the Pi: `alias psudo="sudo env \"PATH=$PATH\""`. Now if you have issues with commands not being found when using `sudo`, run `psudo` instead.
