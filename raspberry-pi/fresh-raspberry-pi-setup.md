@@ -161,3 +161,16 @@ On your personal computer (the device that will login to the Pi over SSH) do the
 1. `ssh-copy-id -i <path-to-generated-.pub-file> <pi-host>`
 
 - Example: `ssh-copy-id -i ~/.ssh/id_my-pi.pub my-pi`
+
+## Setup Remote SSH in VS Code
+
+On your personal computer (the device that will login to the Pi over SSH) do the following:
+
+1. Open VS Code
+2. Go to Preferences
+3. Search for `integrated terminal font`
+4. Set the font as the Nerd Font you downloaded earlier. Example: `MesloLGS NF`.
+5. Install the [`ms-vscode-remote.remote-ssh`](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) extension.
+6. Run the command (`ctrl+shift+p`) named `>Remote-SSH: Connect to Host...`
+7. VS Code will install all the necessary stuff.
+8. Choose a folder to open.
