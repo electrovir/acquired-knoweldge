@@ -45,7 +45,8 @@ The following setup instructions may be irrelevant based on the intended use cas
 ## Install Node.js
 
 1. Install `nvm` from the directions here: https://github.com/nvm-sh/nvm#installing-and-updating
-2. Install Node.js via `nvm` with `nvm install --lts`. (See the [`nvm` usage guide](https://github.com/nvm-sh/nvm#usage) for instructions on installing ther Node.js versions.)
+2. You might need to `source ~/.bashrc` to load nvm into your current shell.
+3. Install Node.js via `nvm` with `nvm install --lts`. (See the [`nvm` usage guide](https://github.com/nvm-sh/nvm#usage) for instructions on installing ther Node.js versions.)
 
 ## Add another user
 
