@@ -75,7 +75,7 @@ style = "bg:0 39"
 
 [sudo]
 format = "[$symbol]($style)"
-symbol = "⚡"
+symbol = " "
 disabled = false
 style = "bg:0 207"
 
