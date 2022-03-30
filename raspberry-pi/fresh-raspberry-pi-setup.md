@@ -42,12 +42,6 @@ An SD card needs to be initialized first from another computer for the Pi to use
 
 The following setup instructions may be irrelevant based on the intended use case of your Pi.
 
-## Install Node.js
-
-1. Install `nvm` from the directions here: https://github.com/nvm-sh/nvm#installing-and-updating
-2. You might need to `source ~/.bashrc` to load nvm into your current shell.
-3. Install Node.js via `nvm` with `nvm install --lts`. (See the [`nvm` usage guide](https://github.com/nvm-sh/nvm#usage) for instructions on installing ther Node.js versions.)
-
 ## Add another user
 
 If you add the same user as your main personal computer, then you can `ssh` into the pi without specifying a username. For example, if this is not done you must run `ssh pi@<ip-address>` to connect. If your PC's user is `Bob` and you add a Pi user with the name `Bob` then you can connect simply via `ssh <ip-address>`.
@@ -116,6 +110,12 @@ Starship suggests installing a [Nerd Font](https://www.nerdfonts.com/font-downlo
 2. Follow the Bash setup instruction (Step 2): https://starship.rs/guide/#step-2-setup-your-shell-to-use-starship
 4. `source ~/.bashrc` to reload without needing to restart your shell.
 5. Create a config file at `~/.config/starship.toml`. I've included my configuration file here: https://raw.githubusercontent.com/electrovir/acquired-knoweldge/master/starship.toml
+
+## Install Node.js
+
+1. Install `nvm` from the directions here: https://github.com/nvm-sh/nvm#installing-and-updating
+2. You might need to `source ~/.bashrc` to load nvm into your current shell.
+3. Install Node.js via `nvm` with `nvm install --lts`. (See the [`nvm` usage guide](https://github.com/nvm-sh/nvm#usage) for instructions on installing ther Node.js versions.)
 
 ## Create name for Pi IP address
 
