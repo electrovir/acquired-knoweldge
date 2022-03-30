@@ -46,11 +46,12 @@ The following setup instructions may be irrelevant based on the intended use cas
 
 If you add the same user as your main personal computer, then you can `ssh` into the pi without specifying a username. For example, if this is not done you must run `ssh pi@<ip-address>` to connect. If your PC's user is `Bob` and you add a Pi user with the name `Bob` then you can connect simply via `ssh <ip-address>`.
 
-1. Add the user: `sudo useradd -m -s "$(which bash)" -G sudo <username>`
+1. Add the user: `sudo useradd -m -s "$(which bash)" -G sudo -G gpio <username>`
     1. This would be `sudo useradd -m -s "$(which bash)" -G sudo Bob` from the example above.
     2. `-m` creates a home directory for this user.
     3. `-s "$(which bash)" sets `bash` as the user's login shell.
     4. `-G sudo` grants the user `sudo` permissions. If this is not wanted, omit these arguments.
+    4. `-G gpio` grants the user permissions to gpio. This way you don't need to use `sudo` to run programs that use them.
 2. Set a password for the new user: `passwd <username>`
     1. This would be `sudo passwd Bob` from the example above.
 
@@ -179,3 +180,26 @@ On your personal computer (the device that will login to the Pi over SSH) do the
 ## Create sudo alias that preserves PATH
 
 Add this to `~/.basrc` on the Pi: `alias psudo="sudo env \"PATH=$PATH\""`. Now if you have issues with commands not being found when using `sudo`, run `psudo` instead.
+
+## Create GPG key for GitHib
+
+1. `gpg --full-generate-key`
+2. Make sure to set 4096 as the size.
+3. Enter GitHub username for name.
+4. Enter GitHub email for email, or use the `no-reply` email GitHub provides.
+5. Run `gpg --list-secret-keys --keyid-format=long` to find the new key's id.
+6. Run `gpg --armor --export <key-id>`
+7. Copy from `-----BEGIN PGP PUBLIC KEY BLOCK-----` to `-----END PGP PUBLIC KEY BLOCK-----`.
+8. In GitHub, navgiate to `Settings` > `SSH and GPG keys`.
+9. Click `New GPG key`
+10. Paste and add.
+
+For more help see this guide from GitHub: https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key
+
+## Setup Git
+
+1. `git config --global user.name <username>`
+2. `git config --global user.email <email>`
+3. `git config --global push.default current`
+4. `git config --global commit.gpgsign true`
+5. `git config --global user.signingkey <key-id>` (`<key-id>` is the id from step 5 in the previous `Create GPG key for GitHib` section)
