@@ -2,6 +2,14 @@
 
 A running list of random things I've learned about computery things.
 
+## 2022
+
+### Change default npm license
+
+```bash
+npm config set init-license "MIT"
+```
+
 ## 2021
 
 ### Fix `git commit` stalling due to gpg signing
