@@ -77,6 +77,8 @@ This will need to be done on your router our your DHCP server. (If you're runnin
 
 This only makes sense if your Pi has a static local IP.
 
+Do this on your personal computer which will `ssh` into the Pi.
+
 1. `sudo nano /etc/hosts`
 2. Add an entry for your Pi: `192.168.0.123 name-for-your-pi`
 
