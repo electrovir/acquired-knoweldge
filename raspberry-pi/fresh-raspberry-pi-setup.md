@@ -179,7 +179,7 @@ Add this to `~/.basrc` on the Pi: `alias psudo="sudo env \"PATH=$PATH\""`. Now i
 2. Make sure to set 4096 as the size.
 3. Enter GitHub username for name.
 4. Enter GitHub email for email, or use the `no-reply` email GitHub provides.
-5. Run `gpg --list-secret-keys --keyid-format=long` to find the new key's id.
+5. Run `gpg --list-secret-keys --keyid-format=long` to find the new key's id. It should be right after something like `sec   rsa4096/` and have your name and email underneath it.
 6. Run `gpg --armor --export <key-id>`
 7. Copy from `-----BEGIN PGP PUBLIC KEY BLOCK-----` to `-----END PGP PUBLIC KEY BLOCK-----`.
 8. In GitHub, navgiate to `Settings` > `SSH and GPG keys`.
