@@ -202,6 +202,8 @@ For more help see this guide from GitHub: https://docs.github.com/en/authenticat
 6. `cat ./<id-file>.pub`
 7. Copy the ouptput of the file and add it to GitHub > Settings > SSH and GPG keys > New SSH key.
 
+**Make sure that when you clone a repo you use the _SSH_ url.** If you cloned a repo with the HTTPS url, you'll need to fix this with `git remote set-url origin <ssh-url>`
+
 See GitHub's guides for more info:
   - Creating an SSH key: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
   - Adding an SSH key to GitHub: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
