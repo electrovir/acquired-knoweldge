@@ -198,8 +198,9 @@ For more help see this guide from GitHub: https://docs.github.com/en/authenticat
     Host github.com
         IdentityFile ~/.ssh/<id-file>
     ```
-5. `cat ./<id-file>.pub`
-6. Copy the ouptput of the file and add it to GitHub > Settings > SSH and GPG keys > New SSH key.
+5. Run `ssh-add ~/.ssh/<id-file>`
+6. `cat ./<id-file>.pub`
+7. Copy the ouptput of the file and add it to GitHub > Settings > SSH and GPG keys > New SSH key.
 
 See GitHub's guides for more info:
   - Creating an SSH key: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
