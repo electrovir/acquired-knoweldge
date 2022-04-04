@@ -73,17 +73,6 @@ The `pi` user is not secure but due to its integration with Raspbian OS it's pro
 
 This will need to be done on your router our your DHCP server. (If you're running a Pi-hole already you can run it as your DHCP server as well.) This will make `ssh`ing into your new Pi much easier.
 
-## Give the static Pi IP a nickname
-
-This only makes sense if your Pi has a static local IP.
-
-Do this on your personal computer which will `ssh` into the Pi.
-
-1. `sudo nano /etc/hosts`
-2. Add an entry for your Pi: `192.168.0.123 name-for-your-pi`
-
-Now you can ssh via `ssh name-for-your-pi`.
-
 ## Disable root user
 
 1. If you created a root password, expire / lock it with `sudo passwd -l root`.
