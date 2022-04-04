@@ -46,12 +46,12 @@ The following setup instructions may be irrelevant based on the intended use cas
 
 If you add the same user as your main personal computer, then you can `ssh` into the pi without specifying a username. For example, if this is not done you must run `ssh pi@<ip-address>` to connect. If your PC's user is `Bob` and you add a Pi user with the name `Bob` then you can connect simply via `ssh <ip-address>`.
 
-1. Add the user: `sudo useradd -m -s "$(which bash)" -G sudo -G gpio <username>`
+1. Add the user: `sudo useradd -m -s "$(which bash)" -G sudo,gpio <username>`
     1. This would be `sudo useradd -m -s "$(which bash)" -G sudo Bob` from the example above.
     2. `-m` creates a home directory for this user.
     3. `-s "$(which bash)" sets `bash` as the user's login shell.
     4. `-G sudo` grants the user `sudo` permissions. If this is not wanted, omit these arguments.
-    4. `-G gpio` grants the user permissions to gpio. This way you don't need to use `sudo` to run programs that use them.
+    4. `,gpio` grants the user permissions to gpio. This way you don't need to use `sudo` to run programs that use them.
 2. Set a password for the new user: `sudo passwd <username>`
     1. This would be `sudo passwd Bob` from the example above.
 
