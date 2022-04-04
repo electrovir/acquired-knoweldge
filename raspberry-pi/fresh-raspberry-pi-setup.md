@@ -52,7 +52,7 @@ If you add the same user as your main personal computer, then you can `ssh` into
     3. `-s "$(which bash)" sets `bash` as the user's login shell.
     4. `-G sudo` grants the user `sudo` permissions. If this is not wanted, omit these arguments.
     4. `-G gpio` grants the user permissions to gpio. This way you don't need to use `sudo` to run programs that use them.
-2. Set a password for the new user: `passwd <username>`
+2. Set a password for the new user: `sudo passwd <username>`
     1. This would be `sudo passwd Bob` from the example above.
 
 ## Disable GUI Autologin
