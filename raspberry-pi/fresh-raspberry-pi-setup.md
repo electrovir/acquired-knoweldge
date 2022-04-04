@@ -195,3 +195,8 @@ For more help see this guide from GitHub: https://docs.github.com/en/authenticat
 3. `git config --global push.default current`
 4. `git config --global commit.gpgsign true`
 5. `git config --global user.signingkey <key-id>` (`<key-id>` is the id from step 5 in the previous `Create GPG key for GitHib` section)
+
+## NPM defaults
+
+1. `npm config set init-license "MIT"`
+2. `npm config set save-prefix=''`
