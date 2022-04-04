@@ -188,6 +188,23 @@ Add this to `~/.basrc` on the Pi: `alias psudo="sudo env \"PATH=$PATH\""`. Now i
 
 For more help see this guide from GitHub: https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key
 
+## Setup SSH for GitHub
+
+1. `ssh-keygen -t ed25519 -C <email>`
+2. `touch ~/.ssh/config`
+3. `nano ~/.ssh/config`.
+4. Add the following:
+    ```
+    Host github.com
+        IdentityFile ~/.ssh/<id-file>
+    ```
+5. `cat ./<id-file>.pub`
+6. Copy the ouptput of the file and add it to GitHub > Settings > SSH and GPG keys > New SSH key.
+
+See GitHub's guides for more info:
+  - Creating an SSH key: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+  - Adding an SSH key to GitHub: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+
 ## Setup Git
 
 1. `git config --global user.name <username>`
