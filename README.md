@@ -4,6 +4,10 @@ A running list of random things I've learned about computery things.
 
 ## 2022
 
+### Wrap a native web component in a React component
+
+https://coryrylan.com/blog/using-web-components-in-react
+
 ### Change default npm license
 
 ```bash
