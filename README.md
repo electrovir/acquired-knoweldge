@@ -4,6 +4,14 @@ A running list of random things I've learned about computery things.
 
 ## 2022
 
+### Add upstream remote for a repo fork
+
+```bash
+git remote add upstream <URL-to-main-repo>
+```
+
+[source](https://stackoverflow.com/a/7244456)
+
 ### Wrap a native web component in a React component
 
 https://coryrylan.com/blog/using-web-components-in-react
