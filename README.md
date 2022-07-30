@@ -4,6 +4,19 @@ A running list of random things I've learned about computery things.
 
 ## 2022
 
+### Enable touch id for terminal `sudo`
+
+Add the line
+```
+auth       sufficient     pam_tid.so
+```
+
+at the top of `/etc/pam.d/sudo` (will need sudo access to write that file).
+
+You'll need to do this after at least every OS update as that file gets overwritten in those updates.
+
+[source](https://apple.stackexchange.com/a/306324)
+
 ### Add upstream remote for a repo fork
 
 ```bash
