@@ -233,6 +233,8 @@ rename 's/<old-string>/<new-string>/g' <files>
 rename 's/.ts/.icon.ts/g' *.ts
 ```
 
+To get this on macOS: `brew install rename`
+
 ### Type special characters in Linux (Ubuntu)
 
 Press `ctrl+shift+u` then the unicode character code.
@@ -249,12 +251,9 @@ No you have a •!
 
 This is useful when, for example, you insert a new SD card into a Raspberry Pi that you've connected to before. This is needed to prevent the `Someone could be eavesdropping on you right now (man-in-the-middle attack)!` ssh error.
 
-Open this file 
 ```bash
-code ~/.ssh/known_hosts
+  ssh-keygen -R ip
 ```
-
-Search for the IP address of the Pi in the file, remove that line.
 
 ### Enable `code` CLI for VS Code on Mac
 
