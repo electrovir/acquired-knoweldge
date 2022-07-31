@@ -4,6 +4,45 @@ A running list of random things I've learned about computery things.
 
 ## 2022
 
+### Automatically change node version on directory change in zsh
+
+Put the following in your `~/.zshrc` file:
+
+```shell
+# place this after nvm initialization!
+autoload -U add-zsh-hook
+load-nvmrc() {
+  local node_version="$(nvm version)"
+  local nvmrc_path="$(nvm_find_nvmrc)"
+
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use
+    fi
+  elif [ "$node_version" != "$(nvm version default)" ]; then
+    echo "Switching to default node version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+```
+
+[source](https://stackoverflow.com/a/57839539)
+
+For any directory that should have a specific Node version, create a `.nvmrc` file in that directory and simply paste the Node version into that file.
+
+Examples:
+  - `v16.16.0`
+  - `16`
+  - `12.22.12`
+
+
+
 ### Enable touch id for terminal `sudo`
 
 Add the line
