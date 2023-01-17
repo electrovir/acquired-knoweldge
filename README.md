@@ -8,7 +8,7 @@ A running list of random things I've learned about computery things.
 
 1. Install `omz`: https://github.com/ohmyzsh/ohmyzsh#basic-installation
 2. Copy `~/.zshrc.pre-oh-my-zsh` back to `~/.zshrc`
-3. add `plugins=(... gitfast)` to `~/.zshrc`
+3. add `plugins=(gitfast)` to `~/.zshrc`
 
 ## 2022
 
