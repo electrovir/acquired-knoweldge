@@ -14,11 +14,11 @@ If you try to debug Mocha tests in Chrome's Node inspector tool but Mocha keeps 
 4. click `Open dedicated DevTools for Node`
 5. click on the `Connection` tab (next to the `Console` tab probably)
 6. find, in your terminal that orignially ran Mocha, the latest `Debugger listening on` log
-7. copy the origin from the websocket (`ws://`) URL (it'll probably look like `127.0.0.1:XXXX`, make sure to include the XXXX part in your copy, the port number)
+7. copy the host from the websocket (`ws://`) URL (it should look like `127.0.0.1:XXXX`, make sure to include the XXXX part in your copy, the port number, but leave out the protocol, `ws://`)
 8. back in Chrome, click `Add connection`
-9. paste in the copied origin
+9. paste in the copied host
 
-Now Chrome will also attach itself to debuggers on that origin and you should be able to debug Mocha again!
+Now Chrome will also attach itself to debuggers on that host and you should be able to debug Mocha again!
 
 ### ~~Fit incredibly slow autocomplete for zsh on macOS when inside of git repositories~~
 
