@@ -4,7 +4,25 @@ A running list of random things I've learned about computery things.
 
 ## 2023
 
-### Fit incredibly slow autocomplete for zsh on macOS when inside of git repositories
+### Debug Mocha tests in the browser when they keep opening new debuggers
+
+If you try to debug Mocha tests in Chrome's Node inspector tool but Mocha keeps opening new debuggers and either skipping your debugger or waiting for eternity for your debugger to attach (the behavior depends on which inspect flag you use), make sure that you've added all ports as connections.
+
+1. run Mocha with `--inspect-brk` to make it pause
+2. open Chrome
+3. go to `chrome://inspect/#devices` in Chrome
+4. click `Open dedicated DevTools for Node`
+5. click on the `Connection` tab (next to the `Console` tab probably)
+6. find, in your terminal that orignially ran Mocha, the latest `Debugger listening on` log
+7. copy the origin from the websocket (`ws://`) URL (it'll probably look like `127.0.0.1:XXXX`, make sure to include the XXXX part in your copy, the port number)
+8. back in Chrome, click `Add connection`
+9. paste in the copied origin
+
+Now Chrome will also attach itself to debuggers on that origin and you should be able to debug Mocha again!
+
+### ~~Fit incredibly slow autocomplete for zsh on macOS when inside of git repositories~~
+
+This doesn't actually work
 
 1. Install `omz`: https://github.com/ohmyzsh/ohmyzsh#basic-installation
 2. Copy `~/.zshrc.pre-oh-my-zsh` back to `~/.zshrc`
