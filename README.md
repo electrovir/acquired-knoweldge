@@ -285,12 +285,9 @@ When the above starts happening a lot, the following are potential solutions:
 ### Modify Mac OS Dock timing
 
 ```bash
-# make dock animation duration shorter (250 ms)
-defaults write com.apple.dock autohide-time-modifier -float 0.25
-# make dock animation delay much shorter (100 ms)
-defaults write com.apple.dock autohide-delay -float 0.1
-# relaunch dock
-killall Dock
+defaults write com.apple.dock autohide-time-modifier -float 0 # make dock animation duration shorter
+defaults write com.apple.dock autohide-delay -float 0 # make dock animation delay much shorter
+killall Dock # relaunch dock
 ```
 
 ### DisplayLink Troubleshooting
