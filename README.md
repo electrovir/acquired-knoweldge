@@ -4,6 +4,12 @@ A running list of random things I've learned about computery things.
 
 ## 2023
 
+### Create an animated `.gif` from a bunch of `.png` files
+
+```bash
+convert -extent 600x600 -delay 8 -monitor -background none -gravity Center -loop 0 -alpha set -dispose previous *.png animation.gif
+```
+
 ### Debug Mocha tests in the browser when they keep opening new debuggers
 
 If you try to debug Mocha tests in Chrome's Node inspector tool but Mocha keeps opening new debuggers and either skipping your debugger or waiting for eternity for your debugger to attach (the behavior depends on which inspect flag you use), make sure that you've added all ports as connections.
