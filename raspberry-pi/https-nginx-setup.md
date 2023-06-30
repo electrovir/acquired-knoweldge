@@ -142,6 +142,7 @@ sudo reboot
     -   you'll see a warning about `ss_stapling` cause your ssl cert is self signed. Ignore this warning.
 -   restart nginx: `sudo systemctl restart nginx`
 -   start your vite process on the pi (using port `5173`)
+    - make sure your vite process is using `127.0.0.1` for the `host` rather than `localhost`
 -   hit `https://<local-pi-ip-address>/vite` on another computer
 -   mnaully trust the certificate or force visiting the website (it's self signed so your browser won't automatically trust it)
 -   You're in!
