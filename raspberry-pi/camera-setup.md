@@ -4,8 +4,9 @@
 
 1. `sudo raspi-config`
 2. navigate to interface
-3. enable legacy camera interface
-4. reboot
+3. legacy camera interface
+4. disable it
+5. reboot
 
 ## try taking a picture
 
@@ -35,7 +36,7 @@ Note that you could try tweaking the `--awbgains` value if the color is super me
   sudo apt install -y python3-picamera2
   
   ```
-- put this file somewhere on your pi: https://github.com/raspberrypi/picamera2/blob/main/examples/frame_server.py
+- put this file somewhere on your pi: https://github.com/raspberrypi/picamera2/blob/main/examples/mjpeg_server.py
 - run `sudo python ./mjpeg_server.py`
 - go to `http://<pi-ip-address>:8000` in a browser on another computer on the local network
 
