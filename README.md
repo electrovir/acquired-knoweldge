@@ -4,6 +4,16 @@ A running list of random things I've learned about computery things.
 
 ## 2023
 
+### Run command with sudo but maintain PATH
+
+In particular this helps with errors like "sudo: npm: command not found" or "sudo: node: command not found":
+
+```shell
+sudo -E env "PATH=$PATH" <command>
+```
+
+[source](https://stackoverflow.com/a/29400598)
+
 ### Create an animated `.gif` from a bunch of `.png` files
 
 ```bash
