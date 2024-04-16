@@ -2,6 +2,22 @@
 
 A running list of random things I've learned about computery things.
 
+## 2024
+
+### Run a sound after very terminal command
+
+This is for zsh on macOS.
+
+- play all available system sounds to pick one:
+    ```sh
+    ls /System/Library/Sounds/ | awk '{print $1}' | while read sound; do printf "playing $sound...\n"; afplay /System/Library/Sounds/$sound; done
+    ```
+- play a sound after every command by adding the following to `~/.zshrc`:
+    ```sh
+    precmd() { ( afplay /System/Library/Sounds/Hero.aiff -v 3 -q 1 &> /dev/null & ) }
+    ```
+    (replace `Hero.aiff` with the sound you want to use)
+
 ## 2023
 
 ### Run command with sudo but maintain PATH
