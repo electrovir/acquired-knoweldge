@@ -4,6 +4,21 @@ A running list of random things I've learned about computery things.
 
 ## 2024
 
+## Change macOS menu bar icon spacing
+
+```bash
+defaults -currentHost write -globalDomain NSStatusItemSpacing -int x
+defaults -currentHost write -globalDomain NSStatusItemSelectionPadding -int y
+```
+
+Propagate changes with a logout or by running:
+
+```bash
+ps -A | grep Core | awk '{ print $1 }' | xargs kill -9
+```
+
+[source](https://apple.stackexchange.com/questions/406316/can-the-spacing-of-menu-bar-apps-be-modified-in-macos-big-sur-and-later/465674#465674)
+
 ### Run a sound after very terminal command
 
 This is for zsh on macOS.
